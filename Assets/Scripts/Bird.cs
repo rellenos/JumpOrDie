@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bird : MonoBehaviour
 {
     
-    public float speed = 1f;
+    public float speed = 0.1f;
     
     void Start()
     {
@@ -15,11 +15,11 @@ public class Bird : MonoBehaviour
     void FixedUpdate()
     {
         transform.position = new Vector2(transform.position.x + speed, transform.position.y);
-        if (transform.position.x > 10f)
+        if (transform.position.x > 1f)
         {
             speed = speed * -1;
         }
-        if (transform.position.x < 10f)
+        if (transform.position.x < 1f)
         {
             speed = speed * -1;
         }
