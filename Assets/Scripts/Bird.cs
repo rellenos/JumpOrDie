@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bird : MonoBehaviour
 {
     
-    public float speed = 0.1f;
+    public float speed = 10000f;
     
     void Start()
     {
@@ -17,11 +17,11 @@ public class Bird : MonoBehaviour
         transform.position = new Vector2(transform.position.x + speed, transform.position.y);
         if (transform.position.x > 1f)
         {
-            speed = speed * -1;
+            speed = speed * -1f;
         }
         if (transform.position.x < 1f)
         {
-            speed = speed * -1;
+            speed = speed * -1f;
         }
     }
 }

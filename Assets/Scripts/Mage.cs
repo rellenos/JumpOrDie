@@ -5,8 +5,7 @@ using UnityEngine;
 public class Mage : MonoBehaviour
 {
 
-    public bool flipX;
-    bool canJump;
+    public bool canJump;
     public float jumpForce = 10f;
 
     private float horizontal;
@@ -47,7 +46,7 @@ public class Mage : MonoBehaviour
         if (Input.GetKeyDown("space") && canJump)
         {
             canJump = false;
-            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 300f));
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 400f));
             anim.SetBool("jump", true);
         }
     }
