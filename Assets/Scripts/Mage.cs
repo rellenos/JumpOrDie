@@ -1,27 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Mage : MonoBehaviour
 {
 
     public bool canJump;
     public float jumpForce = 10f;
+    public int hp = 100;
+    public AudioSource deathSound;
 
     private float horizontal;
     private int costat;
     private Animator anim;
     private Rigidbody2D body;
+    private int startHp;
+
+    public float HpPercent
+    {
+        get {return (float) hp / startHp;}
+    }
 
     void Start()
     {
         costat = 1;
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        startHp = hp;
     }
 
     void Update()
     {
+        if (hp <= 0) return;
+        
         if (Input.GetKey("a"))
         {
             costat = -1;
@@ -57,6 +69,19 @@ public class Mage : MonoBehaviour
         {
             canJump = true;
             anim.SetBool("jump", false);
+        }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        if (hp <= 0) return;
+
+        hp -= damage;
+
+        if(hp <= 0)
+        {
+            Debug.Log("Player Die");
+            GameOver.show ();
         }
     }
 }

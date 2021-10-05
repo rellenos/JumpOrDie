@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Audio;
 
-public class StarController : MonoBehaviour
+public class Score : MonoBehaviour
 {
     private int score;
-    public AudioSource coinSound;
 
-    private void Start()
+    public Text scoreText;
+    void Start()
     {
         score = 0;
     }
@@ -19,10 +18,7 @@ public class StarController : MonoBehaviour
         if(collision.gameObject.tag == "star")
         {
             score++;
+            scoreText.text = " " + score;
         }
-
-        Destroy(gameObject);
-        
-        coinSound.Play();
     }
 }
