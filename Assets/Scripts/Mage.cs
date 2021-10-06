@@ -70,6 +70,11 @@ public class Mage : MonoBehaviour
             canJump = true;
             anim.SetBool("jump", false);
         }
+
+        if(collision.collider.tag == "chest")
+        {
+            Win.show ();
+        }
     }
 
     public void TakeDamage(int damage)
@@ -80,7 +85,6 @@ public class Mage : MonoBehaviour
 
         if(hp <= 0)
         {
-            Debug.Log("Player Die");
             GameOver.show ();
         }
     }

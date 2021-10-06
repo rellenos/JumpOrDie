@@ -14,11 +14,6 @@ public class GameOver : MonoBehaviour
         GameOver.GamerOverStatic.gameObject.SetActive (false);
     }
 
-    void Update()
-    {
-        
-    }
-
     public static void show()
     {
         GameOver.GamerOverStatic.gameObject.SetActive (true);

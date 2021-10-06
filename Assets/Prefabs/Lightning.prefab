@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 1412838502569634214}
   - component: {fileID: 1412838502569634215}
   - component: {fileID: 1412838502569634212}
+  - component: {fileID: 6442259753496298841}
+  - component: {fileID: 5037133474521507651}
   m_Layer: 0
   m_Name: Lightning
   m_TagString: Untagged
@@ -102,3 +104,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!70 &6442259753496298841
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412838502569634213}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0075507015, y: -0.3032487}
+  m_Size: {x: 0.18057469, y: 0.66915476}
+  m_Direction: 0
+--- !u!114 &5037133474521507651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412838502569634213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 242367689bb75114fb7ce82e6123c859, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
